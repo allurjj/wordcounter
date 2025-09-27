@@ -21,42 +21,6 @@ A simple, elegant word counter that runs in your web browser. Paste any text and
 
 Simply open `index.html` in any modern web browser. The application will work immediately with no additional setup required.
 
-## Running with Docker
-
-### Build the Docker Image
-
-```bash
-docker build -t word-counter .
-```
-
-### Run the Container
-
-```bash
-docker run -d -p 29532:29532 --name word-counter-app word-counter
-```
-
-### Access the Application
-
-Open your browser and navigate to:
-```
-http://localhost:29532
-```
-
-### Stop the Container
-
-```bash
-docker stop word-counter-app
-docker rm word-counter-app
-```
-
-### Alternative: One-line Run Command
-
-If you want to run without building first:
-
-```bash
-docker run -d -p 29532:29532 --name word-counter-app word-counter
-```
-
 ## Usage
 
 1. Paste or type any text into the text area
@@ -79,5 +43,11 @@ Works in all modern browsers including:
 - Firefox
 - Safari
 - Edge
+
+## Run as a docker container
+docker run -d -p 29532:29532 --name word-counter ghcr.io/allurjj/wordcounter:latest
+
+Counter can be accessed at:
+http://127.0.0.1:29532/
 
 The application uses standard web technologies with no external dependencies.
